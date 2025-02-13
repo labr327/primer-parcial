@@ -28,9 +28,23 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-light" style="background-color: slateblue;" >
+<?php
+$username = "root"
+$pasword = ""
+$servername = "localhost"
+$database = "interstelar"
 
-    <a class="navbar-brand" href="#" style="color: white; "> inicio </a> 
+$conexion = new mysqli($username, $pasword, $servername, $database);
+if($conexion->conect_error){
+    die("conexion fallida: " . $conexion->connect_error);
+}
+$sql = "SELECT * FROM PERSONAS";
+$RESULTADO = $conexion->query($sql);
+?>
+
+<nav class="navbar navbar-light" style="background-color: slateblue;" >
+
+    <a class="navbar-brand" href="#" style="color: white;"> inicio </a> 
 
   
 
@@ -42,13 +56,13 @@
       <center>
         
   
-          <button  href="\luis-b\luis.php" > unidad 1 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 2 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 3 </button>  <br > 
+          <button  href="" > unidad 1 </button>  <br > 
+          <button  href="#" > unidad 2 </button>  <br > 
+          <button  href="#" > unidad 3 </button>  <br > 
         
       </center>
     </div>
- 
+  </div>
   
   <div class="dropdown" style="display: flex; justify-content: flex-start;">
     <button style="width:100px; height:60px; padding: 10px; font-size: 18px; background-color: slateblue; color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,13 +72,13 @@
       <center>
         
   
-          <button  href="\luis-b\luis.php" > unidad 1 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 2 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 3 </button>  <br > 
+          <button  href="#" > unidad 1 </button>  <br > 
+          <button  href="#" > unidad 2 </button>  <br > 
+          <button  href="#" > unidad 3 </button>  <br > 
         
       </center>
     </div>
-  
+  </div>
   
   <div class="dropdown" style="display: flex; justify-content: flex-start;">
     <button style="width:100px; height:60px; padding: 10px; font-size: 18px; background-color: slateblue; color: white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,9 +88,9 @@
       <center>
         
   
-          <button  href="\luis-b\luis.php" > unidad 1 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 2 </button>  <br > 
-          <button  href="\luis-b\luis.php" > unidad 3 </button>  <br > 
+          <button  href="#" > unidad 1 </button>  <br > 
+          <button  href="#" > unidad 2 </button>  <br > 
+          <button  href="#" > unidad 3 </button>  <br > 
         
       </center>
     </div>
